@@ -37,3 +37,10 @@ proxyoff () {
   echo "HTTP Proxy off"
 }
 
+function brew() {
+  command brew "$@" 
+
+  if [[ $* =~ "upgrade" ]] || [[ $* =~ "update" ]] || [[ $* =~ "outdated" ]]; then
+    sketchybar --trigger brew_update
+  fi
+}
