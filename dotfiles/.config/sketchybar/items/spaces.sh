@@ -16,10 +16,8 @@ do
     icon.padding_left=10
     icon.padding_right=10
     icon.highlight_color=$RED
-    # label.padding_right=20
     label.color=$GREY
     label.highlight_color=$WHITE
-    label.font="$FONT:Regular:16.0"
     label.y_offset=-1
     label.drawing=off
     background.color=$BACKGROUND_1
@@ -28,7 +26,7 @@ do
     script="$PLUGIN_DIR/space.sh"
   )
 
-  sketchybar --add space space.$sid left    \
+  sketchybar --add space space.$sid right    \
              --set space.$sid "${space[@]}" \
              --subscribe space.$sid mouse.clicked
 done
